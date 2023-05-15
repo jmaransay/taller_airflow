@@ -18,7 +18,7 @@ Con los anteriores recursos instalados solo deberías ejecutar:
 
 Con los anteriores pasos la máquina virtual ya estaría creada y en funcionamiento.
 
-Antes de acceder a las misma, para poder usar Apache Airflow, podrías ejecutar:
+Antes de acceder a las misma, para poder usar Apache Airflow, creamos las carpetas compartidas en las que los contenedores van a almacenar los datos generados:
 
     $ cd docker
     
