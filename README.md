@@ -1,19 +1,16 @@
-# taller_airflow
+# UR Airflow Workshop #
 
-En este repositorio puedes encontrar una máquina Vagrant para virtualbox con Docker y portainer instalado.
+## Deploy Airflow ##
 
-Si no dispones de Vagrant puedes encontrar instrucciones en https://developer.hashicorp.com/vagrant/downloads.
+Go to docker folder `cd docker` and run `docker compose up [-d]`
 
-Si no dispones de VirtualBox puedes encontrar instrucciones de instalación en https://www.virtualbox.org/wiki/Downloads
+### Access Airflow UI ###
 
-Con los anteriores recursos instalados solo deberías ejecutar:
+Go to [localhost:8080](localhost:8080) in your browser when everything is ready
 
-    $ git clone https://github.com/jmaransay/taller_airflow.git
+- Username: `airflow`
+- Password: `airflow`
 
-    $ cd taller_airflow
+## Upload own DAGs ##
 
-    $ vagrant up
-
-Con los anteriores pasos la máquina virtual ya estaría creada y en funcionamiento.
-
-Si tienes cualquier duda puedes ponerte en contacto con jesus-maria.aransay@unirioja.es
+Copy your DAG files in `docker/airflow/dags`
