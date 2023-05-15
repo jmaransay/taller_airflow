@@ -1,16 +1,47 @@
-# UR Airflow Workshop #
+# taller_airflow
 
-## Deploy Airflow ##
+En este repositorio puedes encontrar una máquina Vagrant para virtualbox con Docker instalado.
 
-Go to docker folder `cd docker` and run `docker compose up [-d]`
+También existe un fichero "docker-compose" en la carpeta "docker" para desplegar Apache Airflow. 
 
-### Access Airflow UI ###
+Si no dispones de Vagrant puedes encontrar instrucciones en https://developer.hashicorp.com/vagrant/downloads.
 
-Go to [localhost:8080](localhost:8080) in your browser when everything is ready
+Si no dispones de VirtualBox puedes encontrar instrucciones de instalación en https://www.virtualbox.org/wiki/Downloads
 
-- Username: `airflow`
-- Password: `airflow`
+Con los anteriores recursos instalados solo deberías ejecutar:
 
-## Upload own DAGs ##
+    $ git clone https://github.com/jmaransay/taller_airflow.git
 
-Copy your DAG files in `docker/airflow/dags`
+    $ cd taller_airflow
+
+    $ vagrant up
+
+Con los anteriores pasos la máquina virtual ya estaría creada y en funcionamiento.
+
+Antes de acceder a las misma, para poder usar Apache Airflow, podrías ejecutar:
+
+    $ mkdir -p ./dags ./logs ./plugins
+ 
+    $ mkdir ./postgresql/data
+    
+    $ echo -e "AIRFLOW_UID=$(id -u)" > .env
+
+Después accedemos a la máquina:
+
+    $ vagrant ssh
+
+Y en la misma ejecutamos:
+
+    $ cd /vagrant/docker
+
+Creamos las componentes necesarias de la base de datos:
+
+    $ docker compose up airflow-init
+
+Y después "levantamos" toda la infraestructura:
+
+    $ docker compose up
+
+En principio, con los anteriores pasos completados, en http://192.168.56.11:8080 deberías disponer de la interfaz web de Airflow, cuyas credenciales serían "airflow", "airflow".
+
+Si tienes cualquier duda puedes ponerte en contacto con jesus-maria.aransay@unirioja.es
