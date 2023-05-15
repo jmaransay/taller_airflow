@@ -20,6 +20,8 @@ Con los anteriores pasos la máquina virtual ya estaría creada y en funcionamie
 
 Antes de acceder a las misma, para poder usar Apache Airflow, podrías ejecutar:
 
+    $ cd docker
+    
     $ mkdir -p ./dags ./logs ./plugins
  
     $ mkdir ./postgresql/data
