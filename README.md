@@ -24,7 +24,7 @@ Antes de acceder a las misma, para poder usar Apache Airflow, podrías ejecutar:
     
     $ mkdir -p ./dags ./logs ./plugins
  
-    $ mkdir ./postgresql/data
+    $ mkdir -p ./postgresql/data
     
     $ echo -e "AIRFLOW_UID=$(id -u)" > .env
 
