@@ -44,6 +44,6 @@ Y después "levantamos" toda la infraestructura:
 
     $ docker compose up
 
-En principio, con los anteriores pasos completados, en http://192.168.56.11:8080 encontrarás la interfaz web de Airflow, cuyas credenciales son "airflow", "airflow". En https://192.168-56-11:9443 podrás encontrar la interfaz web de portainer.
+En principio, con los anteriores pasos completados, en http://192.168.56.11:8080 encontrarás la interfaz web de Airflow, cuyas credenciales son "airflow", "airflow". En https://192.168.56.11:9443 podrás encontrar la interfaz web de portainer.
 
 Si tienes cualquier duda puedes ponerte en contacto con jesus-maria.aransay@unirioja.es
